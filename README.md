@@ -1,5 +1,7 @@
 # GetX MVVM Todo Task App
 
+![Flutter](https://shields.io) ![GetX](https://shields.io) ![Hive](https://shields.io)
+
 A Flutter application built with production-ready standards, implementing clean architecture principles and robust state management.
 
 ## 🛠️ Architecture & State Management
@@ -9,13 +11,14 @@ A Flutter application built with production-ready standards, implementing clean 
 * **Dependency Injection:** Efficient memory management using GetX controllers injection.
 
 ## 📁 Core Directory Structure
-* `lib/View/` - Declarative UI layers (Auth, Dashboard, Profile, and Onboarding screens).
-* `lib/controller/` - ViewModels managing state, authentication, and local storage services.
-* `lib/model/` - Strongly-typed data models for data parsing.
-* `lib/Routs/` - Centralized application routing configuration.
+* `lib/View/` - Declarative UI layers split neatly into modular page components.
+* `lib/controller/` - Reactive ViewModels managing explicit UI actions and view states.
+* `lib/models/` - Strongly-typed structured data schemas for tasks and user definitions.
+* `lib/services/` - Isolated local cache layer handling core database transactions (Hive & SharedPreferences).
+* `lib/Routs/` - Centralized absolute path configuration and named route bindings.
 
 ## ⚡ Technical Features
 * Fully decoupled Authentication workflow (Login, SignUp, Forgot Password).
-* Dynamic state-driven Task Creation via Bottom Sheets.
-* Reactive dashboard filtering with Calendar state integration.
-* Persistent state handling via dedicated Local Storage Controller.
+* Dynamic state-driven Task Creation via componentized Bottom Sheets.
+* Reactive dashboard filtering with fully dynamic Calendar state integration.
+* Persistent session tracking and profile updates (Username and Image Customization) via Local Storage Layer.
